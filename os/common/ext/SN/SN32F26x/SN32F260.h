@@ -8,19 +8,19 @@
  * @version  V1.1
  * @date     22. March 2017
  *
- * @note     Generated with SVDConv V2.87e 
+ * @note     Generated with SVDConv V2.87e
  *           from CMSIS SVD File 'SN32F260.svd' Version 1.1,
  *
  * @par      ARM Limited (ARM) is supplying this software for use with Cortex-M
  *           processor based microcontroller, but can be equally used for other
  *           suitable processor architectures. This file can be freely distributed.
  *           Modifications to this file shall be clearly marked.
- *           
+ *
  *           THIS SOFTWARE IS PROVIDED "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED
  *           OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF
  *           MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.
  *           ARM SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR
- *           CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER. 
+ *           CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
  *
  *******************************************************************************************************/
 
@@ -126,45 +126,45 @@ typedef enum {
   */
 
 typedef struct {                                    /*!< SN_SYS0 Structure                                                     */
-  
+
   union {
     __IO uint32_t  ANBCTRL;                         /*!< Offset:0x00 Analog Block Control Register                             */
-    
+
     struct {
       __IO uint32_t  IHRCEN     :  1;               /*!< IHRC enable                                                           */
     } ANBCTRL_b;                                    /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED;
-  
+
   union {
     __I  uint32_t  CSST;                            /*!< Offset:0x08 Clock Source Status Register                              */
-    
+
     struct {
       __I  uint32_t  IHRCRDY    :  1;               /*!< IHRC ready flag                                                       */
     } CSST_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CLKCFG;                          /*!< Offset:0x0C System Clock Configuration Register                       */
-    
+
     struct {
       __IO uint32_t  SYSCLKSEL  :  3;               /*!< System clock source selection                                         */
            uint32_t             :  1;
       __I  uint32_t  SYSCLKST   :  3;               /*!< System clock switch status                                            */
     } CLKCFG_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  AHBCP;                           /*!< Offset:0x10 AHB Clock Prescale Register                               */
-    
+
     struct {
       __IO uint32_t  AHBPRE     :  3;               /*!< AHB clock source prescaler                                            */
     } AHBCP_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  RSTST;                           /*!< Offset:0x14 System Reset Status Register                              */
-    
+
     struct {
       __IO uint32_t  SWRSTF     :  1;               /*!< Software reset flag                                                   */
       __IO uint32_t  WDTRSTF    :  1;               /*!< WDT reset flag                                                        */
@@ -173,10 +173,10 @@ typedef struct {                                    /*!< SN_SYS0 Structure      
       __IO uint32_t  PORRSTF    :  1;               /*!< POR reset flag                                                        */
     } RSTST_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  LVDCTRL;                         /*!< Offset:0x18 LVD Control Register                                      */
-    
+
     struct {
       __IO uint32_t  LVDRSTLVL  :  3;               /*!< LVD reset level                                                       */
            uint32_t             :  2;
@@ -186,54 +186,54 @@ typedef struct {                                    /*!< SN_SYS0 Structure      
       __IO uint32_t  LVDEN      :  1;               /*!< LVD enable                                                            */
     } LVDCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EXRSTCTRL;                       /*!< Offset:0x1C External Reset Pin Control Register                       */
-    
+
     struct {
       __IO uint32_t  RESETDIS   :  1;               /*!< External reset pin disable                                            */
     } EXRSTCTRL_b;                                  /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SWDCTRL;                         /*!< Offset:0x20 SWD Pin Control Register                                  */
-    
+
     struct {
       __IO uint32_t  SWDDIS     :  1;               /*!< SWD pin disable                                                       */
     } SWDCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IVTM;                            /*!< Offset:0x24 Interrupt Vector Table Mapping Register                   */
-    
+
     struct {
       __IO uint32_t  IVTM       :  2;               /*!< Interrupt table mapping selection                                     */
            uint32_t             : 14;
       __O  uint32_t  IVTMKEY    : 16;               /*!< IVTMKEY register key                                                  */
     } IVTM_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  NDTCTRL;                         /*!< Offset:0x28 Noise Detect Control Register                             */
-    
+
     struct {
            uint32_t             :  1;
       __IO uint32_t  NDT5V_IE   :  1;               /*!< NDT for VDD interrupt enable bit                                      */
     } NDTCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  NDTSTS;                          /*!< Offset:0x2C Noise Detect Status Register                              */
-    
+
     struct {
            uint32_t             :  1;
       __IO uint32_t  NDT5V_DET  :  1;               /*!< Power noise status of NDT5V IP                                        */
     } NDTSTS_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  ANTIEFT;                         /*!< Offset:0x30 Anti-EFT Ability Control Register                         */
-    
+
     struct {
       __IO uint32_t  AEFT       :  3;               /*!< Anti-EFT ability                                                      */
     } ANTIEFT_b;                                    /*!< BitSize                                                               */
@@ -251,10 +251,10 @@ typedef struct {                                    /*!< SN_SYS0 Structure      
   */
 
 typedef struct {                                    /*!< SN_SYS1 Structure                                                     */
-  
+
   union {
     __IO uint32_t  AHBCLKEN;                        /*!< Offset:0x00 AHB Clock Enable Register                                 */
-    
+
     struct {
       __IO uint32_t  P0CLKEN    :  1;               /*!< Enable AHB clock for P0                                               */
       __IO uint32_t  P1CLKEN    :  1;               /*!< Enable AHB clock for P1                                               */
@@ -275,10 +275,10 @@ typedef struct {                                    /*!< SN_SYS1 Structure      
     } AHBCLKEN_b;                                   /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED;
-  
+
   union {
     __IO uint32_t  APBCP1;                          /*!< Offset:0x08 APB Clock Prescale Register 1                             */
-    
+
     struct {
            uint32_t             : 16;
       __IO uint32_t  SYSTICKPRE :  2;               /*!< SysTick APB clock source prescaler                                    */
@@ -301,10 +301,10 @@ typedef struct {                                    /*!< SN_SYS1 Structure      
   */
 
 typedef struct {                                    /*!< SN_USB Structure                                                      */
-  
+
   union {
     __IO uint32_t  INTEN;                           /*!< Offset:0x00 USB Interrupt Enable Register                             */
-    
+
     struct {
       __IO uint32_t  EP1_NAK_EN :  1;               /*!< EP1 NAK Interrupt Enable                                              */
       __IO uint32_t  EP2_NAK_EN :  1;               /*!< EP2 NAK Interrupt Enable                                              */
@@ -318,10 +318,10 @@ typedef struct {                                    /*!< SN_USB Structure       
       __IO uint32_t  BUS_IE     :  1;               /*!< Bus Event Interrupt Enable                                            */
     } INTEN_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  INSTS;                           /*!< Offset:0x04 USB Interrupt Event Status Register                       */
-    
+
     struct {
       __I  uint32_t  EP1_NAK    :  1;               /*!< Endpoint 1 NAK transaction flag                                       */
       __I  uint32_t  EP2_NAK    :  1;               /*!< Endpoint 2 NAK transaction flag                                       */
@@ -349,10 +349,10 @@ typedef struct {                                    /*!< SN_USB Structure       
       __I  uint32_t  BUS_RESET  :  1;               /*!< USB Bus Reset signal flag                                             */
     } INSTS_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  INSTSC;                          /*!< Offset:0x08 USB Interrupt Event Status Clear Register                 */
-    
+
     struct {
       __O  uint32_t  EP1_NAKC   :  1;               /*!< EP1 NAK clear bit                                                     */
       __O  uint32_t  EP2_NAKC   :  1;               /*!< EP2 NAK clear bit                                                     */
@@ -380,18 +380,18 @@ typedef struct {                                    /*!< SN_USB Structure       
       __O  uint32_t  BUS_RESETC :  1;               /*!< USB Bus Reset clear bit                                               */
     } INSTSC_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  ADDR;                            /*!< Offset:0x0C USB Device Address Register                               */
-    
+
     struct {
       __IO uint32_t  UADDR      :  7;               /*!< USB device's address                                                  */
     } ADDR_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CFG;                             /*!< Offset:0x10 USB Configuration Register                                */
-    
+
     struct {
       __IO uint32_t  EP1_DIR    :  1;               /*!< Endpoint 1 IN/OUT direction setting                                   */
       __IO uint32_t  EP2_DIR    :  1;               /*!< Endpoint 2 IN/OUT direction setting                                   */
@@ -406,20 +406,20 @@ typedef struct {                                    /*!< SN_USB Structure       
       __IO uint32_t  VREG33_EN  :  1;               /*!< Enable the internal VREG33 ouput                                      */
     } CFG_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SGCTL;                           /*!< Offset:0x14 USB Signal Control Register                               */
-    
+
     struct {
       __IO uint32_t  BUS_DN     :  1;               /*!< USB D- state                                                          */
       __IO uint32_t  BUS_DP     :  1;               /*!< USB DP state                                                          */
       __IO uint32_t  BUS_DRVEN  :  1;               /*!< Enable to drive USB bus                                               */
     } SGCTL_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP0CTL;                          /*!< Offset:0x18 USB Endpoint 0 Control Register                           */
-    
+
     struct {
       __IO uint32_t  ENDP_CNT   :  7;               /*!< Endpoint byte count                                                   */
            uint32_t             : 20;
@@ -429,10 +429,10 @@ typedef struct {                                    /*!< SN_USB Structure       
       __IO uint32_t  ENDP_EN    :  1;               /*!< Enable Endpoint 0 Function                                            */
     } EP0CTL_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP1CTL;                          /*!< Offset:0x1C USB Endpoint 1 Control Register                           */
-    
+
     struct {
       __IO uint32_t  ENDP_CNT   :  7;               /*!< Endpoint byte count                                                   */
            uint32_t             : 22;
@@ -440,10 +440,10 @@ typedef struct {                                    /*!< SN_USB Structure       
       __IO uint32_t  ENDP_EN    :  1;               /*!< Endpoint 1 Function enable bit                                        */
     } EP1CTL_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP2CTL;                          /*!< Offset:0x20 USB Endpoint 2 Control Register                           */
-    
+
     struct {
       __IO uint32_t  ENDP_CNT   :  7;               /*!< Endpoint byte count                                                   */
            uint32_t             : 22;
@@ -451,10 +451,10 @@ typedef struct {                                    /*!< SN_USB Structure       
       __IO uint32_t  ENDP_EN    :  1;               /*!< Endpoint 2 Function enable bit                                        */
     } EP2CTL_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP3CTL;                          /*!< Offset:0x24 USB Endpoint 3 Control Register                           */
-    
+
     struct {
       __IO uint32_t  ENDP_CNT   :  7;               /*!< Endpoint byte count                                                   */
            uint32_t             : 22;
@@ -462,10 +462,10 @@ typedef struct {                                    /*!< SN_USB Structure       
       __IO uint32_t  ENDP_EN    :  1;               /*!< Endpoint 3 Function enable bit                                        */
     } EP3CTL_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP4CTL;                          /*!< Offset:0x28 USB Endpoint 4 Control Register                           */
-    
+
     struct {
       __IO uint32_t  ENDP_CNT   :  7;               /*!< Endpoint byte count                                                   */
            uint32_t             : 22;
@@ -474,10 +474,10 @@ typedef struct {                                    /*!< SN_USB Structure       
     } EP4CTL_b;                                     /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED[4];
-  
+
   union {
     __IO uint32_t  EPTOGGLE;                        /*!< Offset:0x3C USB Endpoint Data Toggle Register                         */
-    
+
     struct {
       __IO uint32_t  ENDP1_DATA01:  1;              /*!< Endpoint 1 data toggle bit                                            */
       __IO uint32_t  ENDP2_DATA01:  1;              /*!< Endpoint 2 data toggle bit                                            */
@@ -486,72 +486,72 @@ typedef struct {                                    /*!< SN_USB Structure       
     } EPTOGGLE_b;                                   /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED1[2];
-  
+
   union {
     __IO uint32_t  EP1BUFOS;                        /*!< Offset:0x48 USB Endpoint 1 Buffer Offset Register                     */
-    
+
     struct {
            uint32_t             :  2;
       __IO uint32_t  OFFSET     :  7;               /*!< The offset address for endpoint data buffer                           */
     } EP1BUFOS_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP2BUFOS;                        /*!< Offset:0x4C USB Endpoint 2 Buffer Offset Register                     */
-    
+
     struct {
            uint32_t             :  2;
       __IO uint32_t  OFFSET     :  7;               /*!< The offset address for endpoint data buffer                           */
     } EP2BUFOS_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP3BUFOS;                        /*!< Offset:0x50 USB Endpoint 3 Buffer Offset Register                     */
-    
+
     struct {
            uint32_t             :  2;
       __IO uint32_t  OFFSET     :  7;               /*!< The offset address for endpoint data buffer                           */
     } EP3BUFOS_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EP4BUFOS;                        /*!< Offset:0x54 USB Endpoint 4 Buffer Offset Register                     */
-    
+
     struct {
            uint32_t             :  2;
       __IO uint32_t  OFFSET     :  7;               /*!< The offset address for endpoint data buffer                           */
     } EP4BUFOS_b;                                   /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED2[2];
-  
+
   union {
     __I  uint32_t  FRMNO;                           /*!< Offset:0x60 USB Frame Number Register                                 */
-    
+
     struct {
       __IO uint32_t  FRAME_NO   : 11;               /*!< The 11-bit frame number of the SOF packet                             */
     } FRMNO_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PHYPRM;                          /*!< Offset:0x64 USB PHY Parameter Register                                */
-    
+
     struct {
       __IO uint32_t  PHY_PARAM  :  6;               /*!< USB PHY parameter                                                     */
     } PHYPRM_b;                                     /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED3;
-  
+
   union {
     __IO uint32_t  PHYPRM2;                         /*!< Offset:0x6C USB PHY Parameter Register 2                              */
-    
+
     struct {
       __IO uint32_t  PHY_PS     : 15;               /*!< USB PHY parameter 2                                                   */
     } PHYPRM2_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PS2CTL;                          /*!< Offset:0x70 PS/2 Control Register                                     */
-    
+
     struct {
       __IO uint32_t  SCKM       :  1;               /*!< PS/2 SCK mode control bit                                             */
       __IO uint32_t  SDAM       :  1;               /*!< PS/2 SDA mode control bit                                             */
@@ -562,53 +562,53 @@ typedef struct {                                    /*!< SN_USB Structure       
     } PS2CTL_b;                                     /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED4;
-  
+
   union {
     __IO uint32_t  RWADDR;                          /*!< Offset:0x78 USB Read/Write Address Register                           */
-    
+
     struct {
            uint32_t             :  2;
       __IO uint32_t  RWADDR     :  6;               /*!< USB FIFO address to be read or written from/to USB FIFO               */
     } RWADDR_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  RWDATA;                          /*!< Offset:0x7C USB Read/Write Data Register                              */
-    
+
     struct {
       __IO uint32_t  RWDATA     : 32;               /*!< Data to be read or written from/to USB FIFO                           */
     } RWDATA_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  RWSTATUS;                        /*!< Offset:0x80 USB Read/Write Status Register                            */
-    
+
     struct {
       __IO uint32_t  W_STATUS   :  1;               /*!< Write status of USB FIFO                                              */
       __IO uint32_t  R_STATUS   :  1;               /*!< WRead status of USB FIFO                                              */
     } RWSTATUS_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  RWADDR2;                         /*!< Offset:0x84 USB Read/Write Address Register 2                         */
-    
+
     struct {
            uint32_t             :  2;
       __IO uint32_t  RWADDR     :  6;               /*!< USB FIFO address to be read or written from/to USB FIFO               */
     } RWADDR2_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  RWDATA2;                         /*!< Offset:0x88 USB Read/Write Data Register 2                            */
-    
+
     struct {
       __IO uint32_t  RWDATA     : 32;               /*!< Data to be read or written from/to USB FIFO                           */
     } RWDATA2_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  RWSTATUS2;                       /*!< Offset:0x8C USB Read/Write Status Register 2                          */
-    
+
     struct {
       __IO uint32_t  W_STATUS   :  1;               /*!< Write status of USB FIFO                                              */
       __IO uint32_t  R_STATUS   :  1;               /*!< WRead status of USB FIFO                                              */
@@ -627,10 +627,10 @@ typedef struct {                                    /*!< SN_USB Structure       
   */
 
 typedef struct {                                    /*!< SN_GPIO0 Structure                                                    */
-  
+
   union {
     __IO uint32_t  DATA;                            /*!< Offset:0x00 GPIO Port n Data Register                                 */
-    
+
     struct {
       __IO uint32_t  DATA0      :  1;               /*!< Data of Pn.0                                                          */
       __IO uint32_t  DATA1      :  1;               /*!< Data of Pn.1                                                          */
@@ -650,10 +650,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  DATA15     :  1;               /*!< Data of Pn.15                                                         */
     } DATA_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MODE;                            /*!< Offset:0x04 GPIO Port n Mode Register                                 */
-    
+
     struct {
       __IO uint32_t  MODE0      :  1;               /*!< Mode of Pn.0                                                          */
       __IO uint32_t  MODE1      :  1;               /*!< Mode of Pn.1                                                          */
@@ -673,10 +673,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  MODE15     :  1;               /*!< Mode of Pn.15                                                         */
     } MODE_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CFG;                             /*!< Offset:0x08 GPIO Port n Configuration Register                        */
-    
+
     struct {
       __IO uint32_t  CFG0       :  2;               /*!< Configuration of Pn.0                                                 */
       __IO uint32_t  CFG1       :  2;               /*!< Configuration of Pn.1                                                 */
@@ -696,10 +696,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  CFG15      :  2;               /*!< Configuration of Pn.15                                                */
     } CFG_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IS;                              /*!< Offset:0x0C GPIO Port n Interrupt Sense Register                      */
-    
+
     struct {
       __IO uint32_t  IS0        :  1;               /*!< Interrupt on Pn.0 is event or edge sensitive                          */
       __IO uint32_t  IS1        :  1;               /*!< Interrupt on Pn.1 is event or edge sensitive                          */
@@ -719,10 +719,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  IS15       :  1;               /*!< Interrupt on Pn.15 is event or edge sensitive                         */
     } IS_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IBS;                             /*!< Offset:0x10 GPIO Port n Interrupt Both-edge Sense Register            */
-    
+
     struct {
       __IO uint32_t  IBS0       :  1;               /*!< Interrupt on Pn.0 is triggered ob both edges                          */
       __IO uint32_t  IBS1       :  1;               /*!< Interrupt on Pn.1 is triggered ob both edges                          */
@@ -742,10 +742,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  IBS15      :  1;               /*!< Interrupt on Pn.15 is triggered ob both edges                         */
     } IBS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IEV;                             /*!< Offset:0x14 GPIO Port n Interrupt Event Register                      */
-    
+
     struct {
       __IO uint32_t  IEV0       :  1;               /*!< Interrupt trigged evnet on Pn.0                                       */
       __IO uint32_t  IEV1       :  1;               /*!< Interrupt trigged evnet on Pn.1                                       */
@@ -765,10 +765,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  IEV15      :  1;               /*!< Interrupt trigged evnet on Pn.15                                      */
     } IEV_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IE;                              /*!< Offset:0x18 GPIO Port n Interrupt Enable Register                     */
-    
+
     struct {
       __IO uint32_t  IE0        :  1;               /*!< Interrupt on Pn.0 enable                                              */
       __IO uint32_t  IE1        :  1;               /*!< Interrupt on Pn.1 enable                                              */
@@ -788,10 +788,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __IO uint32_t  IE15       :  1;               /*!< Interrupt on Pn.15 enable                                             */
     } IE_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0x1C GPIO Port n Raw Interrupt Status Register                 */
-    
+
     struct {
       __I  uint32_t  IF0        :  1;               /*!< Pn.0 raw interrupt flag                                               */
       __I  uint32_t  IF1        :  1;               /*!< Pn.1 raw interrupt flag                                               */
@@ -811,10 +811,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __I  uint32_t  IF15       :  1;               /*!< Pn.15 raw interrupt flag                                              */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0x20 GPIO Port n Interrupt Clear Register                      */
-    
+
     struct {
       __O  uint32_t  IC0        :  1;               /*!< Pn.0 interrupt flag clear                                             */
       __O  uint32_t  IC1        :  1;               /*!< Pn.1 interrupt flag clear                                             */
@@ -834,10 +834,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __O  uint32_t  IC15       :  1;               /*!< Pn.15 interrupt flag clear                                            */
     } IC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BSET;                            /*!< Offset:0x24 GPIO Port n Bits Set Operation Register                   */
-    
+
     struct {
       __O  uint32_t  BSET0      :  1;               /*!< Set Pn.0                                                              */
       __O  uint32_t  BSET1      :  1;               /*!< Set Pn.1                                                              */
@@ -857,10 +857,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
       __O  uint32_t  BSET15     :  1;               /*!< Set Pn.15                                                             */
     } BSET_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BCLR;                            /*!< Offset:0x28 GPIO Port n Bits Clear Operation Register                 */
-    
+
     struct {
       __O  uint32_t  BCLR0      :  1;               /*!< Clear Pn.0                                                            */
       __O  uint32_t  BCLR1      :  1;               /*!< Clear Pn.1                                                            */
@@ -893,10 +893,10 @@ typedef struct {                                    /*!< SN_GPIO0 Structure     
   */
 
 typedef struct {                                    /*!< SN_GPIO1 Structure                                                    */
-  
+
   union {
     __IO uint32_t  DATA;                            /*!< Offset:0x00 GPIO Port n Data Register                                 */
-    
+
     struct {
       __IO uint32_t  DATA0      :  1;               /*!< Data of Pn.0                                                          */
       __IO uint32_t  DATA1      :  1;               /*!< Data of Pn.1                                                          */
@@ -906,10 +906,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  DATA5      :  1;               /*!< Data of Pn.5                                                          */
     } DATA_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MODE;                            /*!< Offset:0x04 GPIO Port n Mode Register                                 */
-    
+
     struct {
       __IO uint32_t  MODE0      :  1;               /*!< Mode of Pn.0                                                          */
       __IO uint32_t  MODE1      :  1;               /*!< Mode of Pn.1                                                          */
@@ -919,10 +919,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  MODE5      :  1;               /*!< Mode of Pn.5                                                          */
     } MODE_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CFG;                             /*!< Offset:0x08 GPIO Port n Configuration Register                        */
-    
+
     struct {
       __IO uint32_t  CFG0       :  2;               /*!< Configuration of Pn.0                                                 */
       __IO uint32_t  CFG1       :  2;               /*!< Configuration of Pn.1                                                 */
@@ -932,10 +932,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  CFG5       :  2;               /*!< Configuration of Pn.5                                                 */
     } CFG_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IS;                              /*!< Offset:0x0C GPIO Port n Interrupt Sense Register                      */
-    
+
     struct {
       __IO uint32_t  IS0        :  1;               /*!< Interrupt on Pn.0 is event or edge sensitive                          */
       __IO uint32_t  IS1        :  1;               /*!< Interrupt on Pn.1 is event or edge sensitive                          */
@@ -945,10 +945,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  IS5        :  1;               /*!< Interrupt on Pn.5 is event or edge sensitive                          */
     } IS_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IBS;                             /*!< Offset:0x10 GPIO Port n Interrupt Both-edge Sense Register            */
-    
+
     struct {
       __IO uint32_t  IBS0       :  1;               /*!< Interrupt on Pn.0 is triggered ob both edges                          */
       __IO uint32_t  IBS1       :  1;               /*!< Interrupt on Pn.1 is triggered ob both edges                          */
@@ -958,10 +958,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  IBS5       :  1;               /*!< Interrupt on Pn.5 is triggered ob both edges                          */
     } IBS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IEV;                             /*!< Offset:0x14 GPIO Port n Interrupt Event Register                      */
-    
+
     struct {
       __IO uint32_t  IEV0       :  1;               /*!< Interrupt trigged evnet on Pn.0                                       */
       __IO uint32_t  IEV1       :  1;               /*!< Interrupt trigged evnet on Pn.1                                       */
@@ -971,10 +971,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  IEV5       :  1;               /*!< Interrupt trigged evnet on Pn.5                                       */
     } IEV_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IE;                              /*!< Offset:0x18 GPIO Port n Interrupt Enable Register                     */
-    
+
     struct {
       __IO uint32_t  IE0        :  1;               /*!< Interrupt on Pn.0 enable                                              */
       __IO uint32_t  IE1        :  1;               /*!< Interrupt on Pn.1 enable                                              */
@@ -984,10 +984,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __IO uint32_t  IE5        :  1;               /*!< Interrupt on Pn.5 enable                                              */
     } IE_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0x1C GPIO Port n Raw Interrupt Status Register                 */
-    
+
     struct {
       __I  uint32_t  IF0        :  1;               /*!< Pn.0 raw interrupt flag                                               */
       __I  uint32_t  IF1        :  1;               /*!< Pn.1 raw interrupt flag                                               */
@@ -997,10 +997,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __I  uint32_t  IF5        :  1;               /*!< Pn.5 raw interrupt flag                                               */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0x20 GPIO Port n Interrupt Clear Register                      */
-    
+
     struct {
       __O  uint32_t  IC0        :  1;               /*!< Pn.0 interrupt flag clear                                             */
       __O  uint32_t  IC1        :  1;               /*!< Pn.1 interrupt flag clear                                             */
@@ -1010,10 +1010,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __O  uint32_t  IC5        :  1;               /*!< Pn.5 interrupt flag clear                                             */
     } IC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BSET;                            /*!< Offset:0x24 GPIO Port n Bits Set Operation Register                   */
-    
+
     struct {
       __O  uint32_t  BSET0      :  1;               /*!< Set Pn.0                                                              */
       __O  uint32_t  BSET1      :  1;               /*!< Set Pn.1                                                              */
@@ -1023,10 +1023,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
       __O  uint32_t  BSET5      :  1;               /*!< Set Pn.5                                                              */
     } BSET_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BCLR;                            /*!< Offset:0x28 GPIO Port n Bits Clear Operation Register                 */
-    
+
     struct {
       __O  uint32_t  BCLR0      :  1;               /*!< Clear Pn.0                                                            */
       __O  uint32_t  BCLR1      :  1;               /*!< Clear Pn.1                                                            */
@@ -1049,10 +1049,10 @@ typedef struct {                                    /*!< SN_GPIO1 Structure     
   */
 
 typedef struct {                                    /*!< SN_GPIO2 Structure                                                    */
-  
+
   union {
     __IO uint32_t  DATA;                            /*!< Offset:0x00 GPIO Port n Data Register                                 */
-    
+
     struct {
       __IO uint32_t  DATA0      :  1;               /*!< Data of Pn.0                                                          */
       __IO uint32_t  DATA1      :  1;               /*!< Data of Pn.1                                                          */
@@ -1067,10 +1067,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  DATA10     :  1;               /*!< Data of Pn.10                                                         */
     } DATA_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MODE;                            /*!< Offset:0x04 GPIO Port n Mode Register                                 */
-    
+
     struct {
       __IO uint32_t  MODE0      :  1;               /*!< Mode of Pn.0                                                          */
       __IO uint32_t  MODE1      :  1;               /*!< Mode of Pn.1                                                          */
@@ -1085,10 +1085,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  MODE10     :  1;               /*!< Mode of Pn.10                                                         */
     } MODE_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CFG;                             /*!< Offset:0x08 GPIO Port n Configuration Register                        */
-    
+
     struct {
       __IO uint32_t  CFG0       :  2;               /*!< Configuration of Pn.0                                                 */
       __IO uint32_t  CFG1       :  2;               /*!< Configuration of Pn.1                                                 */
@@ -1103,10 +1103,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  CFG10      :  2;               /*!< Configuration of Pn.10                                                */
     } CFG_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IS;                              /*!< Offset:0x0C GPIO Port n Interrupt Sense Register                      */
-    
+
     struct {
       __IO uint32_t  IS0        :  1;               /*!< Interrupt on Pn.0 is event or edge sensitive                          */
       __IO uint32_t  IS1        :  1;               /*!< Interrupt on Pn.1 is event or edge sensitive                          */
@@ -1121,10 +1121,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  IS10       :  1;               /*!< Interrupt on Pn.10 is event or edge sensitive                         */
     } IS_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IBS;                             /*!< Offset:0x10 GPIO Port n Interrupt Both-edge Sense Register            */
-    
+
     struct {
       __IO uint32_t  IBS0       :  1;               /*!< Interrupt on Pn.0 is triggered ob both edges                          */
       __IO uint32_t  IBS1       :  1;               /*!< Interrupt on Pn.1 is triggered ob both edges                          */
@@ -1139,10 +1139,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  IBS10      :  1;               /*!< Interrupt on Pn.10 is triggered ob both edges                         */
     } IBS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IEV;                             /*!< Offset:0x14 GPIO Port n Interrupt Event Register                      */
-    
+
     struct {
       __IO uint32_t  IEV0       :  1;               /*!< Interrupt trigged evnet on Pn.0                                       */
       __IO uint32_t  IEV1       :  1;               /*!< Interrupt trigged evnet on Pn.1                                       */
@@ -1157,10 +1157,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  IEV10      :  1;               /*!< Interrupt trigged evnet on Pn.10                                      */
     } IEV_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IE;                              /*!< Offset:0x18 GPIO Port n Interrupt Enable Register                     */
-    
+
     struct {
       __IO uint32_t  IE0        :  1;               /*!< Interrupt on Pn.0 enable                                              */
       __IO uint32_t  IE1        :  1;               /*!< Interrupt on Pn.1 enable                                              */
@@ -1175,10 +1175,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __IO uint32_t  IE10       :  1;               /*!< Interrupt on Pn.10 enable                                             */
     } IE_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0x1C GPIO Port n Raw Interrupt Status Register                 */
-    
+
     struct {
       __I  uint32_t  IF0        :  1;               /*!< Pn.0 raw interrupt flag                                               */
       __I  uint32_t  IF1        :  1;               /*!< Pn.1 raw interrupt flag                                               */
@@ -1193,10 +1193,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __I  uint32_t  IF10       :  1;               /*!< Pn.10 raw interrupt flag                                              */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0x20 GPIO Port n Interrupt Clear Register                      */
-    
+
     struct {
       __O  uint32_t  IC0        :  1;               /*!< Pn.0 interrupt flag clear                                             */
       __O  uint32_t  IC1        :  1;               /*!< Pn.1 interrupt flag clear                                             */
@@ -1211,10 +1211,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __O  uint32_t  IC10       :  1;               /*!< Pn.10 interrupt flag clear                                            */
     } IC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BSET;                            /*!< Offset:0x24 GPIO Port n Bits Set Operation Register                   */
-    
+
     struct {
       __O  uint32_t  BSET0      :  1;               /*!< Set Pn.0                                                              */
       __O  uint32_t  BSET1      :  1;               /*!< Set Pn.1                                                              */
@@ -1229,10 +1229,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
       __O  uint32_t  BSET10     :  1;               /*!< Set Pn.10                                                             */
     } BSET_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BCLR;                            /*!< Offset:0x28 GPIO Port n Bits Clear Operation Register                 */
-    
+
     struct {
       __O  uint32_t  BCLR0      :  1;               /*!< Clear Pn.0                                                            */
       __O  uint32_t  BCLR1      :  1;               /*!< Clear Pn.1                                                            */
@@ -1260,10 +1260,10 @@ typedef struct {                                    /*!< SN_GPIO2 Structure     
   */
 
 typedef struct {                                    /*!< SN_GPIO3 Structure                                                    */
-  
+
   union {
     __IO uint32_t  DATA;                            /*!< Offset:0x00 GPIO Port n Data Register                                 */
-    
+
     struct {
       __IO uint32_t  DATA0      :  1;               /*!< Data of Pn.0                                                          */
       __IO uint32_t  DATA1      :  1;               /*!< Data of Pn.1                                                          */
@@ -1276,10 +1276,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  DATA8      :  1;               /*!< Data of Pn.8                                                          */
     } DATA_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MODE;                            /*!< Offset:0x04 GPIO Port n Mode Register                                 */
-    
+
     struct {
       __IO uint32_t  MODE0      :  1;               /*!< Mode of Pn.0                                                          */
       __IO uint32_t  MODE1      :  1;               /*!< Mode of Pn.1                                                          */
@@ -1292,10 +1292,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  MODE8      :  1;               /*!< Mode of Pn.8                                                          */
     } MODE_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CFG;                             /*!< Offset:0x08 GPIO Port n Configuration Register                        */
-    
+
     struct {
       __IO uint32_t  CFG0       :  2;               /*!< Configuration of Pn.0                                                 */
       __IO uint32_t  CFG1       :  2;               /*!< Configuration of Pn.1                                                 */
@@ -1308,10 +1308,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  CFG8       :  2;               /*!< Configuration of Pn.8                                                 */
     } CFG_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IS;                              /*!< Offset:0x0C GPIO Port n Interrupt Sense Register                      */
-    
+
     struct {
       __IO uint32_t  IS0        :  1;               /*!< Interrupt on Pn.0 is event or edge sensitive                          */
       __IO uint32_t  IS1        :  1;               /*!< Interrupt on Pn.1 is event or edge sensitive                          */
@@ -1324,10 +1324,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  IS8        :  1;               /*!< Interrupt on Pn.8 is event or edge sensitive                          */
     } IS_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IBS;                             /*!< Offset:0x10 GPIO Port n Interrupt Both-edge Sense Register            */
-    
+
     struct {
       __IO uint32_t  IBS0       :  1;               /*!< Interrupt on Pn.0 is triggered ob both edges                          */
       __IO uint32_t  IBS1       :  1;               /*!< Interrupt on Pn.1 is triggered ob both edges                          */
@@ -1340,10 +1340,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  IBS8       :  1;               /*!< Interrupt on Pn.8 is triggered ob both edges                          */
     } IBS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IEV;                             /*!< Offset:0x14 GPIO Port n Interrupt Event Register                      */
-    
+
     struct {
       __IO uint32_t  IEV0       :  1;               /*!< Interrupt trigged evnet on Pn.0                                       */
       __IO uint32_t  IEV1       :  1;               /*!< Interrupt trigged evnet on Pn.1                                       */
@@ -1356,10 +1356,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  IEV8       :  1;               /*!< Interrupt trigged evnet on Pn.8                                       */
     } IEV_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IE;                              /*!< Offset:0x18 GPIO Port n Interrupt Enable Register                     */
-    
+
     struct {
       __IO uint32_t  IE0        :  1;               /*!< Interrupt on Pn.0 enable                                              */
       __IO uint32_t  IE1        :  1;               /*!< Interrupt on Pn.1 enable                                              */
@@ -1372,10 +1372,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __IO uint32_t  IE8        :  1;               /*!< Interrupt on Pn.8 enable                                              */
     } IE_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0x1C GPIO Port n Raw Interrupt Status Register                 */
-    
+
     struct {
       __I  uint32_t  IF0        :  1;               /*!< Pn.0 raw interrupt flag                                               */
       __I  uint32_t  IF1        :  1;               /*!< Pn.1 raw interrupt flag                                               */
@@ -1388,10 +1388,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __I  uint32_t  IF8        :  1;               /*!< Pn.8 raw interrupt flag                                               */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0x20 GPIO Port n Interrupt Clear Register                      */
-    
+
     struct {
       __O  uint32_t  IC0        :  1;               /*!< Pn.0 interrupt flag clear                                             */
       __O  uint32_t  IC1        :  1;               /*!< Pn.1 interrupt flag clear                                             */
@@ -1404,10 +1404,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __O  uint32_t  IC8        :  1;               /*!< Pn.8 interrupt flag clear                                             */
     } IC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BSET;                            /*!< Offset:0x24 GPIO Port n Bits Set Operation Register                   */
-    
+
     struct {
       __O  uint32_t  BSET0      :  1;               /*!< Set Pn.0                                                              */
       __O  uint32_t  BSET1      :  1;               /*!< Set Pn.1                                                              */
@@ -1420,10 +1420,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
       __O  uint32_t  BSET8      :  1;               /*!< Set Pn.8                                                              */
     } BSET_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  BCLR;                            /*!< Offset:0x28 GPIO Port n Bits Clear Operation Register                 */
-    
+
     struct {
       __O  uint32_t  BCLR0      :  1;               /*!< Clear Pn.0                                                            */
       __O  uint32_t  BCLR1      :  1;               /*!< Clear Pn.1                                                            */
@@ -1449,10 +1449,10 @@ typedef struct {                                    /*!< SN_GPIO3 Structure     
   */
 
 typedef struct {                                    /*!< SN_WDT Structure                                                      */
-  
+
   union {
     __IO uint32_t  CFG;                             /*!< Offset:0x00 WDT Configuration Register                                */
-    
+
     struct {
       __IO uint32_t  WDTEN      :  1;               /*!< WDT enable                                                            */
       __IO uint32_t  WDTIE      :  1;               /*!< WDT interrupt enable                                                  */
@@ -1461,30 +1461,30 @@ typedef struct {                                    /*!< SN_WDT Structure       
       __O  uint32_t  WDKEY      : 16;               /*!< WDT register key                                                      */
     } CFG_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CLKSOURCE;                       /*!< Offset:0x04 WDT Clock Source Register                                 */
-    
+
     struct {
       __IO uint32_t  CLKSEL     :  2;               /*!< WDT clock source                                                      */
            uint32_t             : 14;
       __O  uint32_t  WDKEY      : 16;               /*!< WDT register key                                                      */
     } CLKSOURCE_b;                                  /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  TC;                              /*!< Offset:0x08 WDT Timer Constant Register                               */
-    
+
     struct {
       __IO uint32_t  TC         :  8;               /*!< Watchdog timer constant reload value                                  */
            uint32_t             :  8;
       __O  uint32_t  WDKEY      : 16;               /*!< WDT register key                                                      */
     } TC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  FEED;                            /*!< Offset:0x0C WDT Feed Register                                         */
-    
+
     struct {
       __O  uint32_t  FV         : 16;               /*!< Watchdog feed value                                                   */
       __O  uint32_t  WDKEY      : 16;               /*!< WDT register key                                                      */
@@ -1503,52 +1503,52 @@ typedef struct {                                    /*!< SN_WDT Structure       
   */
 
 typedef struct {                                    /*!< SN_CT16B0 Structure                                                   */
-  
+
   union {
     __IO uint32_t  TMRCTRL;                         /*!< Offset:0x00 CT16Bn Timer Control Register                             */
-    
+
     struct {
       __IO uint32_t  CEN        :  1;               /*!< Counter enable                                                        */
       __IO uint32_t  CRST       :  1;               /*!< Counter Reset                                                         */
     } TMRCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  TC;                              /*!< Offset:0x04 CT16Bn Timer Counter Register                             */
-    
+
     struct {
       __IO uint32_t  TC         : 16;               /*!< Timer Counter                                                         */
     } TC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PRE;                             /*!< Offset:0x08 CT16Bn Prescale Register                                  */
-    
+
     struct {
       __IO uint32_t  PRE        :  8;               /*!< Prescaler                                                             */
     } PRE_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PC;                              /*!< Offset:0x0C CT16Bn Prescale Counter Register                          */
-    
+
     struct {
       __IO uint32_t  PC         :  8;               /*!< Prescaler Counter                                                     */
     } PC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CNTCTRL;                         /*!< Offset:0x10 CT16Bn Counter Control Register                           */
-    
+
     struct {
       __IO uint32_t  CTM        :  2;               /*!< Counter/Timer Mode                                                    */
       __IO uint32_t  CIS        :  2;               /*!< Counter Input Select                                                  */
     } CNTCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MCTRL;                           /*!< Offset:0x14 CT16Bn Match Control Register                             */
-    
+
     struct {
       __IO uint32_t  MR0IE      :  1;               /*!< Enable generating an interrupt when MR0 matches TC                    */
       __IO uint32_t  MR0RST     :  1;               /*!< Enable reset TC when MR0 matches TC                                   */
@@ -1558,10 +1558,10 @@ typedef struct {                                    /*!< SN_CT16B0 Structure    
   __I  uint32_t  RESERVED[2];
   __IO uint32_t  MR0;                               /*!< Offset:0x20 CT16Bn MR0 Register                                       */
   __I  uint32_t  RESERVED1[23];
-  
+
   union {
     __IO uint32_t  CAPCTRL;                         /*!< Offset:0x80 CT16Bn Capture Control Register                           */
-    
+
     struct {
       __IO uint32_t  CAP0RE     :  1;               /*!< Capture on CT16Bn_CAP0 rising edge                                    */
       __IO uint32_t  CAP0FE     :  1;               /*!< Capture on CT16Bn_CAP0 falling edge                                   */
@@ -1569,29 +1569,29 @@ typedef struct {                                    /*!< SN_CT16B0 Structure    
       __IO uint32_t  CAP0EN     :  1;               /*!< CAP0 function enable                                                  */
     } CAPCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  CAP0;                            /*!< Offset:0x84 CT16Bn CAP0 Register                                      */
-    
+
     struct {
       __I  uint32_t  CAP0       : 16;               /*!< Timer counter capture value                                           */
     } CAP0_b;                                       /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED2[7];
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0xA4 CT16Bn Raw Interrupt Status Register                      */
-    
+
     struct {
       __I  uint32_t  MR0IF      :  1;               /*!< Match channel 0 interrupt flag                                        */
            uint32_t             : 23;
       __I  uint32_t  CAP0IF     :  1;               /*!< Capture channel 0 interrupt flag                                      */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0xA8 CT16Bn Interrupt Clear Register                           */
-    
+
     struct {
       __O  uint32_t  MR0IC      :  1;               /*!< MR0IF clear bit                                                       */
            uint32_t             : 23;
@@ -1611,44 +1611,44 @@ typedef struct {                                    /*!< SN_CT16B0 Structure    
   */
 
 typedef struct {                                    /*!< SN_CT16B1 Structure                                                   */
-  
+
   union {
     __IO uint32_t  TMRCTRL;                         /*!< Offset:0x00 CT16Bn Timer Control Register                             */
-    
+
     struct {
       __IO uint32_t  CEN        :  1;               /*!< Counter enable                                                        */
       __IO uint32_t  CRST       :  1;               /*!< Counter Reset                                                         */
     } TMRCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  TC;                              /*!< Offset:0x04 CT16Bn Timer Counter Register                             */
-    
+
     struct {
       __IO uint32_t  TC         : 16;               /*!< Timer Counter                                                         */
     } TC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PRE;                             /*!< Offset:0x08 CT16Bn Prescale Register                                  */
-    
+
     struct {
       __IO uint32_t  PRE        :  8;               /*!< Prescaler                                                             */
     } PRE_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PC;                              /*!< Offset:0x0C CT16Bn Prescale Counter Register                          */
-    
+
     struct {
       __IO uint32_t  PC         :  8;               /*!< Prescaler Counter                                                     */
     } PC_b;                                         /*!< BitSize                                                               */
   };
   __I  uint32_t  RESERVED;
-  
+
   union {
     __IO uint32_t  MCTRL;                           /*!< Offset:0x14 CT16Bn Match Control Register                             */
-    
+
     struct {
       __IO uint32_t  MR0IE      :  1;               /*!< Enable generating an interrupt when MR0 matches TC                    */
       __IO uint32_t  MR0RST     :  1;               /*!< Enable reset TC when MR0 matches TC                                   */
@@ -1683,10 +1683,10 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __IO uint32_t  MR9STOP    :  1;               /*!< Stop TC and PC and clear CEN bit when MR9 matches TC                  */
     } MCTRL_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MCTRL2;                          /*!< Offset:0x18 CT16Bn Match Control Register                             */
-    
+
     struct {
       __IO uint32_t  MR10IE     :  1;               /*!< Enable generating an interrupt when MR10 matches TC                   */
       __IO uint32_t  MR10RST    :  1;               /*!< Enable reset TC when MR10 matches TC                                  */
@@ -1721,12 +1721,14 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __IO uint32_t  MR19STOP   :  1;               /*!< Stop TC and PC and clear CEN bit when MR19 matches TC                 */
     } MCTRL2_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  MCTRL3;                          /*!< Offset:0x1C CT16Bn Match Control Register                             */
-    
+
     struct {
-           uint32_t             :  3;
+      __IO uint32_t  MR20IE     :  1;               /*!< Enable generating an interrupt when MR20 matches TC                   */
+      __IO uint32_t  MR20RST    :  1;               /*!< Enable reset TC when MR20 matches TC                                  */
+      __IO uint32_t  MR20STOP   :  1;               /*!< Stop TC and PC and clear CEN bit when MR20 matches TC                 */
       __IO uint32_t  MR21IE     :  1;               /*!< Enable generating an interrupt when MR21 matches TC                   */
       __IO uint32_t  MR21RST    :  1;               /*!< Enable reset TC when MR21 matches TC                                  */
       __IO uint32_t  MR21STOP   :  1;               /*!< Stop TC and PC and clear CEN bit when MR21 matches TC                 */
@@ -1758,15 +1760,15 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
   __IO uint32_t  MR17;                              /*!< Offset:0x64 CT16Bn MR17 Register                                      */
   __IO uint32_t  MR18;                              /*!< Offset:0x68 CT16Bn MR18 Register                                      */
   __IO uint32_t  MR19;                              /*!< Offset:0x6C CT16Bn MR19 Register                                      */
-  __I  uint32_t  RESERVED1;
+  __IO uint32_t  MR20;                              /*!< Offset:0x70 CT16Bn MR20 Register                                      */
   __IO uint32_t  MR21;                              /*!< Offset:0x74 CT16Bn MR21 Register                                      */
   __IO uint32_t  MR22;                              /*!< Offset:0x78 CT16Bn MR22 Register                                      */
   __IO uint32_t  MR23;                              /*!< Offset:0x7C CT16Bn MR23 Register                                      */
   __I  uint32_t  RESERVED2[2];
-  
+
   union {
     __IO uint32_t  EM;                              /*!< Offset:0x88 CT16Bn External Match Register                            */
-    
+
     struct {
       __IO uint32_t  EM0        :  1;               /*!< When the TC matches MR0, this bit will act according to EMC0[1:0],
                                                          and also drive the state of CT16Bn_PWM0 output.                       */
@@ -1808,17 +1810,18 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
                                                          and also drive the state of CT16Bn_PWM2 output.                       */
       __IO uint32_t  EM19       :  1;               /*!< When the TC matches MR19, this bit will act according to EMC19[1:0],
                                                          and also drive the state of CT16Bn_PWM3 output.                       */
-           uint32_t             :  1;
+      __IO uint32_t  EM20       :  1;               /*!< When the TC matches MR20, this bit will act according to EMC20[1:0],
+                                                         and also drive the state of CT16Bn_PWM1 output.                       */
       __IO uint32_t  EM21       :  1;               /*!< When the TC matches MR21, this bit will act according to EMC21[1:0],
                                                          and also drive the state of CT16Bn_PWM1 output.                       */
       __IO uint32_t  EM22       :  1;               /*!< When the TC matches MR22, this bit will act according to EMC22[1:0],
                                                          and also drive the state of CT16Bn_PWM2 output.                       */
     } EM_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EMC;                             /*!< Offset:0x8C CT16Bn External Match Control register                    */
-    
+
     struct {
       __IO uint32_t  EMC0       :  2;               /*!< CT16Bn_PWM0 functionality                                             */
       __IO uint32_t  EMC1       :  2;               /*!< CT16Bn_PWM1 functionality                                             */
@@ -1838,24 +1841,24 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __IO uint32_t  EMC15      :  2;               /*!< CT16Bn_PWM15 functionality                                            */
     } EMC_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  EMC2;                            /*!< Offset:0x90 CT16Bn External Match Control register 2                  */
-    
+
     struct {
       __IO uint32_t  EMC16      :  2;               /*!< CT16Bn_PWM16 functionality                                            */
       __IO uint32_t  EMC17      :  2;               /*!< CT16Bn_PWM17 functionality                                            */
       __IO uint32_t  EMC18      :  2;               /*!< CT16Bn_PWM18 functionality                                            */
       __IO uint32_t  EMC19      :  2;               /*!< CT16Bn_PWM19 functionality                                            */
-           uint32_t             :  2;
+      __IO uint32_t  EMC20      :  2;               /*!< CT16Bn_PWM20 functionality                                            */
       __IO uint32_t  EMC21      :  2;               /*!< CT16Bn_PWM21 functionality                                            */
       __IO uint32_t  EMC22      :  2;               /*!< CT16Bn_PWM22 functionality                                            */
     } EMC2_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PWMCTRL;                         /*!< Offset:0x94 CT16Bn PWM Control Register                               */
-    
+
     struct {
       __IO uint32_t  PWM0MODE   :  2;               /*!< PWM0 output mode                                                      */
       __IO uint32_t  PWM1MODE   :  2;               /*!< PWM1 output mode                                                      */
@@ -1875,24 +1878,24 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __IO uint32_t  PWM15MODE  :  2;               /*!< PWM15 output mode                                                     */
     } PWMCTRL_b;                                    /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PWMCTRL2;                        /*!< Offset:0x98 CT16Bn PWM Control Register 2                             */
-    
+
     struct {
       __IO uint32_t  PWM16MODE  :  2;               /*!< PWM16 output mode                                                     */
       __IO uint32_t  PWM17MODE  :  2;               /*!< PWM17 output mode                                                     */
       __IO uint32_t  PWM18MODE  :  2;               /*!< PWM18 output mode                                                     */
       __IO uint32_t  PWM19MODE  :  2;               /*!< PWM19 output mode                                                     */
-           uint32_t             :  2;
+      __IO uint32_t  PWM20MODE  :  2;               /*!< PWM20 output mode                                                     */
       __IO uint32_t  PWM21MODE  :  2;               /*!< PWM21 output mode                                                     */
       __IO uint32_t  PWM22MODE  :  2;               /*!< PWM22 output mode                                                     */
     } PWMCTRL2_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PWMENB;                          /*!< Offset:0x9C CT16Bn PWM Enable register                                */
-    
+
     struct {
       __IO uint32_t  PWM0EN     :  1;               /*!< PWM0 enable                                                           */
       __IO uint32_t  PWM1EN     :  1;               /*!< PWM1 enable                                                           */
@@ -1914,15 +1917,15 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __IO uint32_t  PWM17EN    :  1;               /*!< PWM17 enable                                                          */
       __IO uint32_t  PWM18EN    :  1;               /*!< PWM18 enable                                                          */
       __IO uint32_t  PWM19EN    :  1;               /*!< PWM19 enable                                                          */
-           uint32_t             :  1;
+      __IO uint32_t  PWM20EN    :  1;               /*!< PWM20 enable                                                          */
       __IO uint32_t  PWM21EN    :  1;               /*!< PWM21 enable                                                          */
       __IO uint32_t  PWM22EN    :  1;               /*!< PWM22 enable                                                          */
     } PWMENB_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  PWMIOENB;                        /*!< Offset:0xA0 CT16Bn PWM IO Enable register                             */
-    
+
     struct {
       __IO uint32_t  PWM0IOEN   :  1;               /*!< CT16Bn_PWM0/GPIO selection                                            */
       __IO uint32_t  PWM1IOEN   :  1;               /*!< CT16Bn_PWM1/GPIO selection                                            */
@@ -1944,15 +1947,15 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __IO uint32_t  PWM17IOEN  :  1;               /*!< CT16Bn_PWM17/GPIO selection                                           */
       __IO uint32_t  PWM18IOEN  :  1;               /*!< CT16Bn_PWM18/GPIO selection                                           */
       __IO uint32_t  PWM19IOEN  :  1;               /*!< CT16Bn_PWM19/GPIO selection                                           */
-           uint32_t             :  1;
+      __IO uint32_t  PWM20IOEN  :  1;               /*!< CT16Bn_PWM20/GPIO selection                                           */
       __IO uint32_t  PWM21IOEN  :  1;               /*!< CT16Bn_PWM21/GPIO selection                                           */
       __IO uint32_t  PWM22IOEN  :  1;               /*!< CT16Bn_PWM22/GPIO selection                                           */
     } PWMIOENB_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0xA4 CT16Bn Raw Interrupt Status Register                      */
-    
+
     struct {
       __I  uint32_t  MR0IF      :  1;               /*!< Match channel 0 interrupt flag                                        */
       __I  uint32_t  MR1IF      :  1;               /*!< Match channel 1 interrupt flag                                        */
@@ -1974,16 +1977,16 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __I  uint32_t  MR17IF     :  1;               /*!< Match channel 17 interrupt flag                                       */
       __I  uint32_t  MR18IF     :  1;               /*!< Match channel 18 interrupt flag                                       */
       __I  uint32_t  MR19IF     :  1;               /*!< Match channel 19 interrupt flag                                       */
-           uint32_t             :  1;
+      __I  uint32_t  MR20IF     :  1;               /*!< Match channel 20 interrupt flag                                       */
       __I  uint32_t  MR21IF     :  1;               /*!< Match channel 21 interrupt flag                                       */
       __I  uint32_t  MR22IF     :  1;               /*!< Match channel 22 interrupt flag                                       */
       __I  uint32_t  MR23IF     :  1;               /*!< Match channel 23 interrupt flag                                       */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0xA8 CT16Bn Interrupt Clear Register                           */
-    
+
     struct {
       __O  uint32_t  MR0IC      :  1;               /*!< MR0IF clear bit                                                       */
       __O  uint32_t  MR1IC      :  1;               /*!< MR1IF clear bit                                                       */
@@ -2005,7 +2008,7 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
       __O  uint32_t  MR17IC     :  1;               /*!< MR17IF clear bit                                                      */
       __O  uint32_t  MR18IC     :  1;               /*!< MR18IF clear bit                                                      */
       __O  uint32_t  MR19IC     :  1;               /*!< MR19IF clear bit                                                      */
-           uint32_t             :  1;
+      __O  uint32_t  MR20IC     :  1;               /*!< MR20IF clear bit                                                      */
       __O  uint32_t  MR21IC     :  1;               /*!< MR21IF clear bit                                                      */
       __O  uint32_t  MR22IC     :  1;               /*!< MR22IF clear bit                                                      */
       __O  uint32_t  MR23IC     :  1;               /*!< MR23IF clear bit                                                      */
@@ -2025,10 +2028,10 @@ typedef struct {                                    /*!< SN_CT16B1 Structure    
 
 typedef struct {                                    /*!< SN_PMU Structure                                                      */
   __I  uint32_t  RESERVED[16];
-  
+
   union {
     __IO uint32_t  CTRL;                            /*!< Offset:0x40 PMU Control Register                                      */
-    
+
     struct {
       __IO uint32_t  MODE       :  3;               /*!< Low Power mode selection                                              */
     } CTRL_b;                                       /*!< BitSize                                                               */
@@ -2046,10 +2049,10 @@ typedef struct {                                    /*!< SN_PMU Structure       
   */
 
 typedef struct {                                    /*!< SN_SPI0 Structure                                                     */
-  
+
   union {
     __IO uint32_t  CTRL0;                           /*!< Offset:0x00 SPIn Control Register 0                                   */
-    
+
     struct {
       __IO uint32_t  SSPEN      :  1;               /*!< SSP enable bit                                                        */
       __IO uint32_t  LOOPBACK   :  1;               /*!< Loopback mode enable                                                  */
@@ -2064,28 +2067,28 @@ typedef struct {                                    /*!< SN_SPI0 Structure      
       __IO uint32_t  SELDIS     :  1;               /*!< Auto-SEL disable bit. For SPI mode only                               */
     } CTRL0_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CTRL1;                           /*!< Offset:0x04 SPIn Control Register 1                                   */
-    
+
     struct {
       __IO uint32_t  MLSB       :  1;               /*!< MSB/LSB seletion                                                      */
       __IO uint32_t  CPOL       :  1;               /*!< Clock priority selection                                              */
       __IO uint32_t  CPHA       :  1;               /*!< Clock phase of edge sampling                                          */
     } CTRL1_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CLKDIV;                          /*!< Offset:0x08 SPIn Clock Divider Register                               */
-    
+
     struct {
       __IO uint32_t  DIV        :  8;               /*!< SPIn SCK=SPIn_PCLK/(2*DIV+2)                                          */
     } CLKDIV_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  STAT;                            /*!< Offset:0x0C SPIn Status Register                                      */
-    
+
     struct {
       __I  uint32_t  TX_EMPTY   :  1;               /*!< TX FIFO empty flag                                                    */
       __I  uint32_t  TX_FULL    :  1;               /*!< TX FIFO full flag                                                     */
@@ -2096,10 +2099,10 @@ typedef struct {                                    /*!< SN_SPI0 Structure      
       __I  uint32_t  RXFIFOTHF  :  1;               /*!< RX FIFO threshold flag                                                */
     } STAT_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  IE;                              /*!< Offset:0x10 SPIn Interrupt Enable Register                            */
-    
+
     struct {
       __IO uint32_t  RXOVFIE    :  1;               /*!< RX FIFO overflow interrupt enable                                     */
       __IO uint32_t  RXTOIE     :  1;               /*!< RX time-out interrupt enable                                          */
@@ -2107,10 +2110,10 @@ typedef struct {                                    /*!< SN_SPI0 Structure      
       __IO uint32_t  TXFIFOTHIE :  1;               /*!< TX FIFO threshold interrupt enable                                    */
     } IE_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RIS;                             /*!< Offset:0x14 SPIn Raw Interrupt Status Register                        */
-    
+
     struct {
       __I  uint32_t  RXOVFIF    :  1;               /*!< RX FIFO overflow interrupt flag                                       */
       __I  uint32_t  RXTOIF     :  1;               /*!< RX time-out interrupt flag                                            */
@@ -2118,10 +2121,10 @@ typedef struct {                                    /*!< SN_SPI0 Structure      
       __I  uint32_t  TXFIFOTHIF :  1;               /*!< TX FIFO threshold interrupt flag                                      */
     } RIS_b;                                        /*!< BitSize                                                               */
   };
-  
+
   union {
     __O  uint32_t  IC;                              /*!< Offset:0x18 SPIn Interrupt Clear Register                             */
-    
+
     struct {
       __O  uint32_t  RXOVFIC    :  1;               /*!< RX FIFO overflow flag clear                                           */
       __O  uint32_t  RXTOIC     :  1;               /*!< RX time-out interrupt flag clear                                      */
@@ -2129,18 +2132,18 @@ typedef struct {                                    /*!< SN_SPI0 Structure      
       __O  uint32_t  TXFIFOTHIC :  1;               /*!< TX Interrupt flag Clear                                               */
     } IC_b;                                         /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  DATA;                            /*!< Offset:0x1C SPIn Data Register                                        */
-    
+
     struct {
       __IO uint32_t  Data       : 16;               /*!< Data                                                                  */
     } DATA_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  DF;                              /*!< Offset:0x20 SPIn Data Fetch Register                                  */
-    
+
     struct {
       __IO uint32_t  DF         :  1;               /*!< SPI data fetch delay enable                                           */
     } DF_b;                                         /*!< BitSize                                                               */
@@ -2158,10 +2161,10 @@ typedef struct {                                    /*!< SN_SPI0 Structure      
   */
 
 typedef struct {                                    /*!< SN_I2C0 Structure                                                     */
-  
+
   union {
     __IO uint32_t  CTRL;                            /*!< Offset:0x00 I2Cn Control Register                                     */
-    
+
     struct {
            uint32_t             :  1;
       __IO uint32_t  NACK       :  1;               /*!< NACK assert flag                                                      */
@@ -2174,10 +2177,10 @@ typedef struct {                                    /*!< SN_I2C0 Structure      
       __IO uint32_t  I2CEN      :  1;               /*!< I2Cn interface enable                                                 */
     } CTRL_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  STAT;                            /*!< Offset:0x04 I2Cn Status Register                                      */
-    
+
     struct {
       __I  uint32_t  RX_DN      :  1;               /*!< RX done status                                                        */
       __I  uint32_t  ACK_STAT   :  1;               /*!< ACK done status                                                       */
@@ -2193,26 +2196,26 @@ typedef struct {                                    /*!< SN_I2C0 Structure      
       __IO uint32_t  I2CIF      :  1;               /*!< I2C interrupt flag                                                    */
     } STAT_b;                                       /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  TXDATA;                          /*!< Offset:0x08 I2Cn TX Data Register                                     */
-    
+
     struct {
       __IO uint32_t  Data       :  8;               /*!< TX Data                                                               */
     } TXDATA_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __I  uint32_t  RXDATA;                          /*!< Offset:0x0C I2Cn RX Data Register                                     */
-    
+
     struct {
       __I  uint32_t  Data       :  8;               /*!< RX Data received when RX_DN=1                                         */
     } RXDATA_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SLVADDR0;                        /*!< Offset:0x10 I2Cn Slave Address 0 Register                             */
-    
+
     struct {
       __IO uint32_t  ADDR       : 10;               /*!< I2Cn slave address 0                                                  */
            uint32_t             : 20;
@@ -2220,58 +2223,58 @@ typedef struct {                                    /*!< SN_I2C0 Structure      
       __IO uint32_t  ADD_MODE   :  1;               /*!< Slave address mode                                                    */
     } SLVADDR0_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SLVADDR1;                        /*!< Offset:0x14 I2Cn Slave Address 1 Register                             */
-    
+
     struct {
       __IO uint32_t  ADDR       : 10;               /*!< I2Cn slave address 1                                                  */
     } SLVADDR1_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SLVADDR2;                        /*!< Offset:0x18 I2Cn Slave Address 2 Register                             */
-    
+
     struct {
       __IO uint32_t  ADDR       : 10;               /*!< I2Cn slave address 2                                                  */
     } SLVADDR2_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SLVADDR3;                        /*!< Offset:0x1C I2Cn Slave Address 3 Register                             */
-    
+
     struct {
       __IO uint32_t  ADDR       : 10;               /*!< I2Cn slave address 3                                                  */
     } SLVADDR3_b;                                   /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SCLHT;                           /*!< Offset:0x20 I2Cn SCL High Time Register                               */
-    
+
     struct {
       __IO uint32_t  SCLH       :  8;               /*!< SCLn High period time=(SCLHT+1)*I2Cn_PCLK cycle                       */
     } SCLHT_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SCLLT;                           /*!< Offset:0x24 I2Cn SCL Low Time Register                                */
-    
+
     struct {
       __IO uint32_t  SCLL       :  8;               /*!< SCLn Low period time=(SCLLT+1)*I2Cn_PCLK cycle                        */
     } SCLLT_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  SCLCT;                           /*!< Offset:0x28 I2C SCL Check Time register                               */
-    
+
     struct {
       __IO uint32_t  SCLCT      :  4;               /*!< Count for checking SCL arbitration in Master mode.                    */
     } SCLCT_b;                                      /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  TOCTRL;                          /*!< Offset:0x2C I2Cn Timeout Control Register                             */
-    
+
     struct {
       __IO uint32_t  TO         : 16;               /*!< Timeout period time = TO*I2Cn_PCLK cycle                              */
     } TOCTRL_b;                                     /*!< BitSize                                                               */
@@ -2289,28 +2292,28 @@ typedef struct {                                    /*!< SN_I2C0 Structure      
   */
 
 typedef struct {                                    /*!< SN_FLASH Structure                                                    */
-  
+
   union {
     __IO uint32_t  LPCTRL;                          /*!< Offset:0x00 Flash Low Power Control Register                          */
-    
+
     struct {
       __IO uint32_t  LPMODE     :  4;               /*!< Flash Low Power mode selection bit                                    */
     } LPCTRL_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  STATUS;                          /*!< Offset:0x04 Flash Status Register                                     */
-    
+
     struct {
       __I  uint32_t  BUSY       :  1;               /*!< Busy flag                                                             */
            uint32_t             :  1;
       __IO uint32_t  ERR        :  1;               /*!< Erase/Error flag                                                      */
     } STATUS_b;                                     /*!< BitSize                                                               */
   };
-  
+
   union {
     __IO uint32_t  CTRL;                            /*!< Offset:0x08 Flash Control Register                                    */
-    
+
     struct {
       __IO uint32_t  PG         :  1;               /*!< Flash program mode chosen bit                                         */
       __IO uint32_t  PER        :  1;               /*!< Page erase mode chosen bit                                            */
@@ -2322,10 +2325,10 @@ typedef struct {                                    /*!< SN_FLASH Structure     
   };
   __IO uint32_t  DATA;                              /*!< Offset:0x0C Flash Data Register                                       */
   __IO uint32_t  ADDR;                              /*!< Offset:0x10 Flash Address Register                                    */
-  
+
   union {
     __I  uint32_t  CHKSUM;                          /*!< Offset:0x14 Flash Checksum Register                                   */
-    
+
     struct {
       __I  uint32_t  UserROM    : 16;               /*!< Checksum of User ROM                                                  */
       __I  uint32_t  BootROM    : 16;               /*!< Checksum of Boot ROM                                                  */
